@@ -1,4 +1,14 @@
-import { User, CreditCard, Settings, Keyboard, Users, Plus, LogOut, ExternalLink, Calendar } from "lucide-react"
+import {
+  Calendar,
+  CreditCard,
+  ExternalLink,
+  Keyboard,
+  LogOut,
+  Plus,
+  Settings,
+  User,
+  Users,
+} from "lucide-react";
 
 export const Icons = {
   user: User,
@@ -9,5 +19,5 @@ export const Icons = {
   plus: Plus,
   logOut: LogOut,
   externalLink: ExternalLink,
-  calendar: Calendar
-} 
+  calendar: Calendar,
+};

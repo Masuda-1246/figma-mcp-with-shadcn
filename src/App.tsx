@@ -1,13 +1,22 @@
-import React from "react";
 import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Icons } from "@/components/ui/icons";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Switch } from "@/components/ui/switch";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import React from "react";
 
 function App() {
   return (
@@ -16,7 +25,7 @@ function App() {
         {/* Header */}
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-2">
-            <div className="h-6 w-6 rounded-full bg-slate-900"></div>
+            <div className="h-6 w-6 rounded-full bg-slate-900" />
             <span className="font-semibold text-lg text-slate-900">shadcn/ui</span>
           </div>
           <h1 className="text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -32,20 +41,26 @@ function App() {
             <RadioGroup defaultValue="comfortable" className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
                 <RadioGroupItem value="default" id="default" />
-                <label htmlFor="default" className="font-medium text-sm">Default</label>
+                <label htmlFor="default" className="font-medium text-sm">
+                  Default
+                </label>
               </div>
               <div className="flex items-center gap-2">
                 <RadioGroupItem value="comfortable" id="comfortable" />
-                <label htmlFor="comfortable" className="font-medium text-sm">Comfortable</label>
+                <label htmlFor="comfortable" className="font-medium text-sm">
+                  Comfortable
+                </label>
               </div>
               <div className="flex items-center gap-2">
                 <RadioGroupItem value="compact" id="compact" />
-                <label htmlFor="compact" className="font-medium text-sm">Compact</label>
+                <label htmlFor="compact" className="font-medium text-sm">
+                  Compact
+                </label>
               </div>
             </RadioGroup>
 
             <Popover>
-              <PopoverTrigger asChild>
+              <PopoverTrigger asChild={true}>
                 <div className="w-[320px] rounded-md border border-slate-200 p-4 shadow-sm">
                   <div className="flex flex-col gap-2">
                     <h3 className="font-medium text-base">Dimensions</h3>
@@ -53,26 +68,26 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-2 mt-4">
                     <div className="flex flex-col gap-1.5 w-full">
-                      <label className="text-sm font-medium">Width</label>
-                      <div className="flex-1 rounded-md border border-slate-200 px-3 py-2">
+                      <label htmlFor="width-input" className="text-sm font-medium">Width</label>
+                      <div id="width-input" className="flex-1 rounded-md border border-slate-200 px-3 py-2">
                         <span className="text-sm">100%</span>
                       </div>
                     </div>
                     <div className="flex flex-col gap-1.5 w-full">
-                      <label className="text-sm font-medium">Max. width</label>
-                      <div className="flex-1 rounded-md border border-slate-200 px-3 py-2">
+                      <label htmlFor="max-width-input" className="text-sm font-medium">Max. width</label>
+                      <div id="max-width-input" className="flex-1 rounded-md border border-slate-200 px-3 py-2">
                         <span className="text-sm">300px</span>
                       </div>
                     </div>
                     <div className="flex flex-col gap-1.5 w-full">
-                      <label className="text-sm font-medium">Height</label>
-                      <div className="flex-1 rounded-md border border-slate-200 px-3 py-2">
+                      <label htmlFor="height-input" className="text-sm font-medium">Height</label>
+                      <div id="height-input" className="flex-1 rounded-md border border-slate-200 px-3 py-2">
                         <span className="text-sm">25px</span>
                       </div>
                     </div>
                     <div className="flex flex-col gap-1.5 w-full">
-                      <label className="text-sm font-medium">Max. height</label>
-                      <div className="flex-1 rounded-md border border-slate-200 px-3 py-2">
+                      <label htmlFor="max-height-input" className="text-sm font-medium">Max. height</label>
+                      <div id="max-height-input" className="flex-1 rounded-md border border-slate-200 px-3 py-2">
                         <span className="text-sm">none</span>
                       </div>
                     </div>
@@ -93,18 +108,22 @@ function App() {
               <div className="flex items-center gap-10">
                 <div className="flex items-center gap-2">
                   <Switch id="airplane-mode" />
-                  <label htmlFor="airplane-mode" className="text-sm font-medium">Airplane mode</label>
+                  <label htmlFor="airplane-mode" className="text-sm font-medium">
+                    Airplane mode
+                  </label>
                 </div>
                 <Button>Continue</Button>
               </div>
 
               <HoverCard>
-                <HoverCardTrigger asChild>
+                <HoverCardTrigger asChild={true}>
                   <div className="flex items-center gap-4 p-4 rounded-md border border-slate-200 shadow-sm w-[350px]">
-                    <div className="h-12 w-12 bg-slate-800 rounded-full"></div>
+                    <div className="h-12 w-12 bg-slate-800 rounded-full" />
                     <div className="flex flex-col">
                       <span className="font-semibold text-sm text-slate-900">@nextjs</span>
-                      <span className="text-sm text-slate-900">The React Framework - created and maintained by @vercel</span>
+                      <span className="text-sm text-slate-900">
+                        The React Framework - created and maintained by @vercel
+                      </span>
                       <div className="flex items-center gap-1 mt-2">
                         <Icons.calendar className="h-4 w-4 text-slate-500" />
                         <span className="text-xs text-slate-500">Joined December 2021</span>
@@ -122,16 +141,23 @@ function App() {
 
               <Tabs defaultValue="account" className="w-[350px]">
                 <TabsList className="w-full bg-slate-100 p-1 rounded-md">
-                  <TabsTrigger value="account" className="flex-1 rounded-sm data-[state=active]:bg-white">Account</TabsTrigger>
-                  <TabsTrigger value="password" className="flex-1 rounded-sm text-slate-500">Password</TabsTrigger>
+                  <TabsTrigger
+                    value="account"
+                    className="flex-1 rounded-sm data-[state=active]:bg-white"
+                  >
+                    Account
+                  </TabsTrigger>
+                  <TabsTrigger value="password" className="flex-1 rounded-sm text-slate-500">
+                    Password
+                  </TabsTrigger>
                 </TabsList>
               </Tabs>
             </div>
           </div>
 
           <div className="w-full flex justify-center">
-          <DropdownMenu>
-              <DropdownMenuTrigger asChild>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild={true}>
                 <Button variant="outline">Open Menu</Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56">
@@ -187,7 +213,7 @@ function App() {
                     <span>Support</span>
                     <Icons.externalLink className="ml-auto h-4 w-4 opacity-50" />
                   </DropdownMenuItem>
-                  <DropdownMenuItem disabled>
+                  <DropdownMenuItem disabled={true}>
                     <Icons.creditCard className="mr-2 h-4 w-4 opacity-50" />
                     <span className="opacity-50">API</span>
                   </DropdownMenuItem>
@@ -209,8 +235,10 @@ function App() {
           <div className="flex items-center gap-4">
             <TooltipProvider>
               <Tooltip>
-                <TooltipTrigger asChild>
-                  <div className="bg-slate-900 text-white px-3 py-1.5 rounded-md text-sm font-medium">Beta</div>
+                <TooltipTrigger asChild={true}>
+                  <div className="bg-slate-900 text-white px-3 py-1.5 rounded-md text-sm font-medium">
+                    Beta
+                  </div>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>This is a beta version</p>
