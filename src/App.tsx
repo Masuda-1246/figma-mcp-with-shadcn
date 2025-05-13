@@ -88,7 +88,6 @@ function App() {
             </Popover>
           </div>
 
-          {/* Right Column */}
           <div className="flex flex-col items-center gap-12">
             <div className="flex flex-col gap-14">
               <div className="flex items-center gap-10">
@@ -128,8 +127,10 @@ function App() {
                 </TabsList>
               </Tabs>
             </div>
+          </div>
 
-            <DropdownMenu>
+          <div className="w-full flex justify-center">
+          <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline">Open Menu</Button>
               </DropdownMenuTrigger>
